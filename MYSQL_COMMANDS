@@ -1,0 +1,71 @@
+mysql commands 
+chat gpt notes https://chat.openai.com/c/ae452212-7c5d-48fe-8bdd-9d3a6b27e99d
+
+1.create table
+
+create Table Students(
+int id auto-incriment primary key
+string name varchar(255),
+long mobilenumber (10) unique,
+
+);
+
+2. inesrt data into tables.
+
+insert into(id,name,mobilenumber) values(10,"shyam",9985142967);
+insert into(id,name,mobilenumber) values(20,"ram",6301500644);
+or 
+insert into values(10,"shyam",9985142967);
+
+3. delete(DROP) table: delete data permanetly
+
+
+    drop table students
+
+
+4.modify column in the table 
+
+A. add class column 
+
+   alter table students
+   add class varchar(10);
+
+ b. modify data in column 
+
+ ALTER TABLE STUDENTS
+ MODIFY MOBILE NUMBER(6301500644);
+ C.drop column in table
+
+ ALTER TABLE STUDENTS
+ DROP COLUMN CLASS;
+
+5. TRUNCATE TABLE: IF YOU WANT DELETE DATA FROM TABLE USE truncate table
+
+  TRUNCATE TABLE STUDENTS;
+
+
+  6. index creation and deletion 
+
+
+ A. CREATE INDEX INDEX_NAME ON STUDENTS(CLASS)-----> STUDENTS TABLE(CLASS IS COLUMN)
+ B. DROP INDEX INDEX-NAME ON STUDENTS;
+
+ 7.CREAYTE VIEW ----creating view name as students_details that specifiies some special column from employee table 
+
+
+  a.  CREATE VIEW STUDENT_DETAILS AS
+    SELECT ID, NAME, MOBILE
+    FROM STUDENTS
+    WHERE CLASS = "A";
+
+B. drop a view 
+
+
+   DROP VIEW STUDENT_DETAILS;
+
+
+
+
+
+
+
